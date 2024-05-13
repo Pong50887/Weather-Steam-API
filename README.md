@@ -29,3 +29,9 @@ This project is about creating API from Temperature, Humidity, and Pm2.5 and Str
 
 ## Query API
 [Query API](https://github.com/Pong50887/Weather-Steam-API/wiki/API-Endpoint)
+
+## Database Schema
+[Database Schema](https://github.com/Pong50887/Weather-Steam-API/wiki/Database-Schema)
+
+## Database source
+[Data source]([https://github.com/Pong50887/Weather-Steam-API/wiki/Database-Schema](https://github.com/Pong50887/Weather-Steam-API/wiki/Data-Source))
