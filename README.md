@@ -26,3 +26,6 @@ This project is about creating API from Temperature, Humidity and Pm2.5 and Stre
 4. open https://editor.swagger.io/ and put the YAML file to create servers.
 5. change the name to stub and put it in the directory.
 6. run files App.py
+
+## Query API
+[Query API](https://github.com/Pong50887/Weather-Steam-API/wiki/API-Endpoint)
