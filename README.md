@@ -1,5 +1,5 @@
 # Weather-Steam-API
-This project is about creating API from Temperature, Humidity and Pm2.5 and Stream_games. We collect data from the primary sourch and secondary source. To see the pattern and trend of the data.
+This project is about creating API from Temperature, Humidity, and Pm2.5 and Stream_games. We collect data from the primary source and secondary sources. To see the pattern and trend of the data.
 
 ## How to Run and Install
 1. Git clone
