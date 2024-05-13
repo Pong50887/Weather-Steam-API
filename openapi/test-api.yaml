@@ -1,0 +1,155 @@
+openapi: 3.0.0
+
+info:
+  title: Weather_Steam API
+  version: 1.0.0
+
+servers:
+  - url: http://127.0.0.1:8080/Weather_Steam-API
+
+paths:
+  /get_weather:
+    get:
+      operationId: controller.get_all_weather
+      responses:
+        "200":
+          description: An array of weather_data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Items"
+
+  /get_all_games:
+    get:
+      operationId: controller.get_all_games
+      responses:
+        "200":
+          description: An array of all games
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Games"
+
+  /get_game/{game_name}:
+    parameters:
+      - name: game_name
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: controller.get_game_name
+      responses:
+        "200":
+          description: An array of games selected
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Games"
+
+  /get_weather_day/{day}:
+    parameters:
+      - name: day
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: controller.get_weather_day
+      responses:
+        "200":
+          description: An array of weather_data in exact day
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Items"
+
+  /get_game_day/{day}:
+    parameters:
+      - name: day
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: controller.get_game_day
+      responses:
+        "200":
+          description: An array of games_data in exact day
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Games"
+
+  /get_game_time/{time}:
+    parameters:
+      - name: time
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: controller.get_game_time
+      responses:
+        "200":
+          description: An array of games_data in exact time
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Games"
+
+  /get_weather_time/{time}:
+    parameters:
+      - name: time
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: controller.get_weather_time
+      responses:
+        "200":
+          description: An array of weather_data in exact time
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Items"
+
+components:
+  schemas:
+    Items:
+      type: object
+      properties:
+        ts:
+          type: string
+        temp:
+          type: integer
+        humid:
+          type: integer
+        pm2_5:
+          type: integer
+
+    Games:
+      type: object
+      properties:
+        ts:
+          type: string
+        name:
+          type: string
+        player:
+          type: integer
+
